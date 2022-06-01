@@ -1,0 +1,82 @@
+﻿@layout LoginLayout
+@page "/LogIn"
+@using BlazorApplication.Authentication
+@using System.ComponentModel.DataAnnotations
+@using System.Text
+
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
+<h3 class="text-center mb-5 mt-5">Login</h3>
+
+<AuthorizeView>
+    <NotAuthorized>
+        <div class="d-flex flex-column justify-content-around align-items-center">
+            <div class="form-group">
+                <label class="d-block">Username:</label>
+                <input type="text" placeholder="username" @bind-value="username"/>
+            </div>
+            <div class="form-group">
+                <label class="d-block">Password</label>
+                <input type="password" placeholder="password" @bind-value="password"/>
+            </div>
+            <div style="color:red">@errorMessage</div>
+            <button class="btn btn-outline-dark"  @onclick="Login">
+                Login
+            </button>
+            <button class="btn btn-outline-dark"  @onclick="Register">
+               Register
+            </button>
+        </div>
+    </NotAuthorized>
+    <Authorized>
+      <div class="d-flex flex-column justify-content-around align-items-center">
+      <button class="btn btn-outline-dark" @onclick="Logout">
+          Log out
+      </button>
+       </div>
+    </Authorized>
+</AuthorizeView>
+
+
+@code {
+    private string username;
+    private string password;
+    private string errorMessage;
+
+    private async Task Login()
+    {
+        errorMessage = "";
+        try
+        {
+            await ((SystemAuthenticationStateProvider) AuthenticationStateProvider).ValidateLogin(username, password);
+            username = "";
+            password = "";
+        }
+        catch (Exception e)
+        {
+            errorMessage = e.Message;
+        }
+    }
+
+    private async Task Logout()
+    {
+        errorMessage = "";
+        username = "";
+        password = "";
+        try
+        {
+            ((SystemAuthenticationStateProvider) AuthenticationStateProvider).Logout();
+            NavigationManager.NavigateTo("/");
+        }
+        catch (Exception e)
+        {
+            errorMessage = e.Message;
+        }
+    }
+
+    private async Task Register()
+    {
+        NavigationManager.NavigateTo("/Register");
+    }
+
+}

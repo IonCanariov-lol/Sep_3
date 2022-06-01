@@ -1,0 +1,59 @@
+﻿@page "/Register"
+@using BlazorApp1.Models.User
+@using Services
+
+@inject NavigationManager NavigationManager
+
+<div class="card">
+    <h4 class="card-header">Register</h4>
+    <div class="card-body">
+        <EditForm Model="@user" OnValidSubmit="OnValidSubmit">
+            <DataAnnotationsValidator />
+            <div class="form-group">
+                <label>First Name</label>
+                <InputText @bind-Value="user.FirstName" class="form-control" />
+                <ValidationMessage For="@(() => user.FirstName)" />
+            </div>
+            <div class="form-group">
+                <label>Last Name</label>
+                <InputText @bind-Value="user.LastName" class="form-control" />
+                <ValidationMessage For="@(() => user.LastName)" />
+            </div>
+            <div class="form-group">
+                <label>Username</label>
+                <InputText @bind-Value="user.Username" class="form-control" />
+                <ValidationMessage For="@(() => user.Username)" />
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <InputText @bind-Value="user.Password" type="password" class="form-control" />
+                <ValidationMessage For="@(() => user.Password)" />
+            </div>
+               <div class="field">
+                   <button class="createaccount" @onclick="CreateAccount">Register</button>
+               </div>
+        </EditForm>
+    </div>
+</div>
+@code {
+    private UserModel user = new UserModel();
+
+    private string UsernameErrorLabel= "";
+    private string RegisterFailedErrorLabel = "";
+
+
+    private async void OnValidSubmit()
+    {
+        try
+        {
+            await 
+            
+            
+            NavigationManager.NavigateTo("/Login");
+        }
+        catch (Exception ex)
+        {
+            StateHasChanged();
+        }
+    }
+}

@@ -1,0 +1,8 @@
+C:\Users\canar\OneDrive\Рабочий стол\school\Semester3\Sep_3\HotelBookingSystem\Sep3_T1\BlazorApplication\obj\Debug\net6.0\BlazorApplication.csproj.AssemblyReference.cache
+C:\Users\canar\OneDrive\Рабочий стол\school\Semester3\Sep_3\HotelBookingSystem\Sep3_T1\BlazorApplication\obj\Debug\net6.0\BlazorApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\canar\OneDrive\Рабочий стол\school\Semester3\Sep_3\HotelBookingSystem\Sep3_T1\BlazorApplication\obj\Debug\net6.0\BlazorApplication.AssemblyInfoInputs.cache
+C:\Users\canar\OneDrive\Рабочий стол\school\Semester3\Sep_3\HotelBookingSystem\Sep3_T1\BlazorApplication\obj\Debug\net6.0\BlazorApplication.AssemblyInfo.cs
+C:\Users\canar\OneDrive\Рабочий стол\school\Semester3\Sep_3\HotelBookingSystem\Sep3_T1\BlazorApplication\obj\Debug\net6.0\BlazorApplication.csproj.CoreCompileInputs.cache
+C:\Users\canar\OneDrive\Рабочий стол\school\Semester3\Sep_3\HotelBookingSystem\Sep3_T1\BlazorApplication\obj\Debug\net6.0\BlazorApplication.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\canar\OneDrive\Рабочий стол\school\Semester3\Sep_3\HotelBookingSystem\Sep3_T1\BlazorApplication\obj\Debug\net6.0\BlazorApplication.RazorAssemblyInfo.cache
+C:\Users\canar\OneDrive\Рабочий стол\school\Semester3\Sep_3\HotelBookingSystem\Sep3_T1\BlazorApplication\obj\Debug\net6.0\BlazorApplication.RazorAssemblyInfo.cs
